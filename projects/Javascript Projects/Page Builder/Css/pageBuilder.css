@@ -1,0 +1,159 @@
+/* ----------------- Created Css File ------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Jersey+15&display=swap");
+
+:root {
+  --fontFamily: "Jersey 15", sans-serif;
+  --fontL: normal normal normal 15rem Assistant;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+body {
+  display: flex;
+  background-color: #e7e7e7;
+}
+
+.wrapper {
+  width: 25vw;
+  min-height: 100vh;
+  background: url(../Images/parparim2.jpg) no-repeat;
+  background-size: 100% 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.49);
+}
+.wrapper-content {
+  text-align: center;
+}
+
+.wrapper-content > h1 {
+  font-family: var(--fontFamily);
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-family: Assistant;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+input,
+select {
+  width: 100%;
+  height: 2rem;
+}
+
+#txt-area {
+  resize: none;
+  height: 3.5rem;
+  width: 100%;
+}
+
+.input-buttons {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.input-buttons > button {
+  width: 100%;
+  height: 2rem;
+}
+
+.container {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5rem auto;
+  background-color: #fff;
+  box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.49);
+}
+
+/*------------------RESPONSIVE - MEDIA QUERIES-------------------*/
+
+/*------------media queries-1000px---------------*/
+
+@media screen and (max-width: 1000px) {
+  body {
+    flex-direction: row;
+  }
+
+  .wrapper {
+    width: 40vw;
+  }
+
+  .wrapper-content > h1,
+  p {
+    text-align: center;
+  }
+
+  .container {
+    width: 80%;
+    margin: 2rem;
+    min-height: 100vh;
+  }
+
+  .input-field {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .input-box {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+/*-----------------media queries-500px-------------------*/
+
+@media screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    width: 100vw;
+    min-height: fit-content;
+  }
+
+  .wrapper-content > h1,
+  p {
+    text-align: center;
+  }
+
+  .container {
+    width: 80%;
+    height: 100vh;
+    margin: 3rem auto;
+  }
+
+  .input-field {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .input-box {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

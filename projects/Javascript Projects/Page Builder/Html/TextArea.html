@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Area</title>
+</head>
+<body>
+    <textarea id="t-area"></textarea>
+    <input type="number" id="w-size" placeholder="width">
+    <input type="number"id="h-size" placeholder="height">
+    <input type="color" id="u-color">
+    <button id="btn">add</button>
+    <div class="container"></div>
+
+
+    <script>
+        document.querySelector('#btn').addEventListener('click', () =>{
+            const box = document.createElement('div');  
+            let txtArea = document.querySelector('#t-area').value;
+            const sizeW = document.querySelector('#w-size').value;
+            const sizeH = document.querySelector('#h-size').value;
+            let uColor = document.querySelector('#u-color').value;
+
+            box.innerHTML = txtArea;
+            box.style.width = sizeW + 'px';
+            box.style.height = sizeH + 'px';
+            box.style.border = '1px solid #ff0000';
+            box.style.backgroundColor = uColor;
+
+            document.querySelector('.container').appendChild(box);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+/* -------------import area----------- */
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap");
+
+/* -------------root setup -------------*/
+:root {
+  --options: normal normal 500 1rem Assistant;
+  --label: normal normal bold 3rem Assistant;
+}
+/* --------------reset setup------------ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ------------html stylin----------- */
+
+body {
+  background: url(../IMAGES/math_bgc.jpg) no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  place-items: center;
+}
+
+.warpper {
+  width: 50%;
+  height: fit-content;
+  min-height: 90%;
+  background: url(../IMAGES/car.jpg);
+  background-size: 100%;
+  margin: 2rem;
+  border-radius: 5px;
+}
+
+header {
+  background-color: lightgray;
+  border-bottom: 1px solid #000;
+  border-radius: 5px;
+}
+
+header h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* GAME OPTIONS SECTION */
+
+.options {
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+
+.options h2 {
+  margin-top: 1rem;
+}
+
+select {
+  margin: 0.5rem;
+  padding: 0.5rem 2rem;
+  font: var(--options);
+}
+
+option {
+  font: var(--options);
+  border-radius: 30px;
+}
+
+/* CALC GAME SECTION */
+
+.calc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-field {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+
+.input-box label {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.calc-game {
+  width: 100%;
+  margin: 3rem 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  font: var(--label);
+}
+
+.calc-game input {
+  height: 3rem;
+}
+
+.calc-game input[type="submit"] {
+  font: var(--options);
+  width: 20%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.calc-game input[type="submit"]:hover {
+  background-color: #f9fafb;
+}
+
+.calc-game input[type="submit"]:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.1);
+  outline-offset: 2px;
+}
+
+.calc-game input[type="number"] {
+  width: 30%;
+  font-size: 1.5rem;
+}
+
+/* table */
+
+#results {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+#results tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border-left: 1px solid black;
+}
+
+#results th {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #f0f0f0;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#results td {
+  background-color: #f8f8f8;
+  width: 100%;
+  text-align: center;
+  font-size: 16pt;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+/* responsive */
+
+@media screen and (max-width: 850px) {
+  body {
+    margin: 0;
+    background: url("../IMAGES/math_bgc.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .warpper {
+    width: 70%;
+    margin: auto;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .options h2 {
+    display: block;
+    width: 100%;
+  }
+
+  .calc-game {
+    width: 80%;
+  }
+
+  label {
+    font-size: 2.5rem;
+  }
+
+  .calc-game input {
+    height: 2.5rem;
+  }
+
+  .exercise {
+    width: 100%;
+    text-align: end;
+  }
+  .calc-game input[type="submit"] {
+    width: 70%;
+  }
+
+  .calc-game input[type="number"] {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .warpper {
+    width: 90vw;
+  }
+  .input-field {
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .input-box {
+    width: 100%;
+  }
+  .input-field label {
+    margin: 0;
+    font-size: 1rem;
+  }
+  select {
+    width: 70%;
+    margin: 1rem auto;
+  }
+  #results {
+    margin-bottom: 1rem;
+  }
+  #results td {
+    font-size: 13pt;
+  }
+}

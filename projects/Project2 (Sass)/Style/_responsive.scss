@@ -1,0 +1,94 @@
+//mixin media
+/* -----------------media queries / PHONES--------------- */
+@mixin respond-to($breakpoint) {
+    @if $breakpoint =='small' {
+        @media screen and (max-width: 675px) {
+            @content;
+        }
+    }
+
+    /* -------------media queries / TABLETS--------------- */
+    @else if $breakpoint =='medium' {
+        @media screen and (min-width: 675px) and (max-width:1000px) {
+            @content;
+        }
+    }
+}
+
+.header {
+    @include respond-to(small) {
+        background: url('../Images/mobile.png') no-repeat;
+        background-size: 100% 100%;
+        min-height: 400px;
+    }
+}
+
+.header h1,
+.header p {
+    @include respond-to(small) {
+        display: none;
+    }
+}
+
+.form {
+    @include respond-to(small) {
+        margin-top: 5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.form .column {
+    @include respond-to(small) {
+        width: 80%;
+        margin: 0.5rem;
+    }
+}
+
+.form input {
+    @include respond-to(small) {
+        background-color: #E5EEFF;
+    }
+}
+
+.form input[type="submit"] {
+    @include respond-to(small) {
+        width: 80%;
+        margin-top: 1rem;
+    }
+}
+
+/* -------------media queries / TABLETS--------------- */
+.header {
+    @include respond-to(medium) {
+        min-height: 400px;
+    }
+}
+
+.form {
+    @include respond-to(medium) {
+        margin-top: 5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.form .column {
+    @include respond-to(medium) {
+        width: 80%;
+        margin: 0.5rem;
+    }
+}
+
+.form input {
+    @include respond-to(medium) {
+        background-color: #E5EEFF;
+    }
+}
+
+.form input[type="submit"] {
+    @include respond-to(medium) {
+        width: 30%;
+        margin-top: 1rem;
+    }
+}

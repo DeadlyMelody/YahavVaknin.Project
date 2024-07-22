@@ -1,0 +1,265 @@
+/* reset */
+:root {
+    --contP: normal normal normal 13pt Assistant;
+    --conth1: normal normal 700 30pt Assistant;
+    --conth2: normal normal 650 20pt Assistant;
+    --label: normal normal 600 12pt Assistant;
+    --bgsize: 100% 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E5EEFF;
+}
+
+.out-container {
+    visibility: hidden;
+}
+/* ------------CONTAINER----------------- */
+.container {
+    width: 60vw;
+    display: grid;
+    justify-content: center;
+    margin: 7rem auto;
+    gap: 1rem;
+    grid-template-areas:
+        "card1 card2 bluecard bluecard"
+        "card3 card4 bluecard bluecard"
+        "card5 card6 card7 card8"
+        "form form card9 card10"
+        "form form card11 card12"
+        "form form card13 card14";
+}
+/* -------------CARDS STYLE------------------ */
+.cards {
+    width: 15vw;
+    height: 200px;
+}
+
+.blue-box {
+    grid-area: bluecard;
+    width: 100%;
+    height: 100%;
+    background-color: #020253;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.blue-box h1 {
+    color: #0EE1DA;
+    font: var(--conth1);
+}
+
+.blue-box p {
+    color: #F9F9F9;
+    inline-size: 80%;
+    align-items: center;
+    font: var(--contP);
+}
+
+/* ------------CARDS NUMBERS STYLING-------------- */
+.card1 {
+    grid-area: card1;
+    background: url('../Images/hawaii.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+.card2 {
+    grid-area: card2;
+    background: url('../Images/orangepeople.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+.card3 {
+    grid-area: card3;
+    background: url('../Images/kingkong.png') no-repeat;
+    background-size: var(--bgsize);
+
+}
+
+.card4 {
+    grid-area: card4;
+    background: url('../Images/aCow.png') no-repeat;
+    background-size: var(--bgsize);
+}
+.card5 {
+    grid-area: card5;
+    background: url('../Images/wonderland.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+.card6 {
+    grid-area: card6;
+    background: url('../Images/beach.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+.card7 {
+    grid-area: card7;
+    background: url('../Images/desert.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+.card8 {
+    grid-area: card8;
+    background: url('../Images/jungle.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+.card9 {
+    grid-area: card9;
+    background: url('../Images/amonkey.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+.card10 {
+    grid-area: card10;
+    background: url('../Images/orangePerson.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+.card11 {
+    grid-area: card11;
+    background: url('../Images/greenery.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+.card12 {
+    grid-area: card12;
+    background: url('../Images/train.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+.card13 {
+    grid-area: card13;
+    background: url('../Images/goldenigloo.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+.card14 {
+    grid-area: card14;
+    background: url('../Images/sunset.png') no-repeat;
+    background-size: var(--bgsize);
+}
+
+
+/* ------------------FORM SECTION------------------- */
+.form {
+    grid-area: form;
+    background-color: #8E097C;
+    width: 31vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 3rem;
+    /* text-align: center; */
+}
+
+.form h2 {
+    color: #FFFFFF;
+    text-align: center;
+    font: var(--conth2);
+    margin-bottom: 1rem;
+}
+
+.form p {
+    color: #F9F9F9;
+    text-align: center;
+    font: var(--contP);
+}
+
+.input-box {
+    direction: rtl;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.input-box label {
+    margin-bottom: 0.2rem;
+    margin-top: 1rem;
+    font: var(--label);
+    color: #0EE1DA;
+}
+
+.input-box label:first-child {
+    margin-top: 3rem;
+}
+
+.input-box input {
+    height: 2.5rem;
+    width: 100%;
+    border: none;
+    border-bottom: 4px solid #0EE1DA;
+    background-color: #E5EEFF;
+}
+
+.input-box textarea {
+    resize: none;
+    width: 100%;
+    height: 6.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 4px solid #0EE1DA;
+    background-color: #E5EEFF;
+}
+
+.input-box input[type="button"] {
+    background-color: #0EE1DA;
+    font: normal normal 800 13pt Assistant;
+    letter-spacing: 1px;
+}
+
+/* --------------MEDIA QUERIES / PHONES------------------- */
+@media screen and (max-width:800px) {
+    .body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100vw;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+        grid-template-areas:
+            "bluecard bluecard"
+            "bluecard bluecard"
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8"
+            "form form"
+            "form form"
+            "form form"
+            "card9 card10"
+            "card11 card12"
+            "card13 card14";
+    }
+
+    .out-container {
+        visibility: visible;
+    }
+
+    .in-container {
+        display: none;
+    }
+
+    .cards {
+        width: 100%;
+    }
+
+    .blue-box {
+        height: 25rem;
+    }
+}

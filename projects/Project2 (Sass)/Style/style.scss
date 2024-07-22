@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl
+}
+
+@import "setup";
+@import "header";
+@import "form";
+@import "responsive";

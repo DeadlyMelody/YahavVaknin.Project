@@ -1,0 +1,313 @@
+/* reset */
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Rubik:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&display=swap&family=Lexend:wght@100..900&display=swap&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --logo: normal normal bold 15pt Lexend;
+    --contact-header: normal normal bold 30pt Anta;
+    --contact-p: normal normal normal 12pt Rubik;
+    --footer-text: normal normal normal 12pt Oswald;
+
+    --title-font: normal normal bold 30pt Anta;
+    --links-font: normal normal bold 12pt Karla;
+}
+
+body {
+    overflow-x: clip;
+}
+
+header {
+    background-color: #ffffff46;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+header .logo {
+    text-decoration: none;
+    font: var(--logo);
+}
+
+/* -------------banner------------ */
+
+.banner {
+    width: 100%;
+    height: 20vw;
+    background: url(../Images/banner.jpg) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner h1 {
+    font: var(--footer-text);
+    font-weight: 600;
+    font-size: 30pt;
+}
+
+.banner p {
+    font: var(--contact-p);
+    inline-size: 80%;
+}
+
+/* -------------icons-------------- */
+
+.icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    padding: 1rem;
+    box-shadow: 0px 5px 16px -10px #000;
+}
+
+.icon-img {
+    width: 30px;
+    height: 30px;
+}
+
+.img-1 {
+    background: url(../Images/Html.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.img-2 {
+    background: url(../Images/Css.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.img-3 {
+    background: url(../Images/JavaScript_resized.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.img-4 {
+    background: url(../Images/bootstrap.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.img-5 {
+    background: url(../Images/Scss.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* --------------------CONTAINER------------------ */
+
+.p-container {
+    width: 50vw;
+    height: 60vh;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    background: #515151;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    border: 1px solid rgba(111, 111, 111, 1);
+
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-container:hover {
+    box-shadow: 0px 0px 20px 1px #9898983f;
+}
+
+.bgi-container {
+    background: url(../Images/thinkoutofthebox.jpeg) no-repeat;
+    width: 80%;
+    height: 60%;
+    background-size: 100% 100%;
+    margin-top: 3rem;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+.p-container .bgi-container h1 {
+    text-align: center;
+    transform: translateY(-70%);
+    font: var(--title-font);
+}
+
+.buttons {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+
+.buttons .btn-watch,
+.buttons .btn-download {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 15px;
+    border-bottom: 3px ridge #000;
+}
+
+.buttons a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 1.6s;
+    font: var(--links-font);
+    text-transform: uppercase;
+}
+
+.buttons a:visited {
+    color: inherit;
+}
+
+.btns:hover {
+    background-color: transparent;
+}
+
+.btns:hover a {
+    color: #000;
+    transform: scale(1.1);
+    text-shadow: 0 0 2px #fff;
+}
+
+.p-container .resume-icons {
+    width: 100%;
+    margin-top: 2rem;
+    background-color: #ffffff00;
+    display: flex;
+    padding: 8px;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    box-shadow: 0 1px 10px rgba(255, 255, 255, 0.312);
+    border-radius: 0 0 15px 15px;
+}
+
+.p-container .resume-icons i {
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+.p-container .resume-icons i:nth-child(1) {
+    color: #b197fc;
+}
+
+.p-container .resume-icons i:nth-child(2) {
+    color: #74c0fc;
+}
+
+.p-container .resume-icons i:nth-child(3) {
+    color: #ffd43d;
+}
+
+.p-container .resume-icons i:nth-child(4) {
+    color: #ff3ddb;
+}
+
+/* -------------------FOOTER SECTION----------------- */
+
+footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: #b3b3b3;
+}
+
+footer .footer-icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+}
+
+footer .footer-icons a {
+    text-decoration: none;
+    font-size: 20pt;
+    color: #000;
+}
+
+footer .footer-icons a span {
+    font-size: 10pt;
+    font: var(--footer-text);
+    margin-left: 10px;
+}
+
+footer .credits {
+    display: flex;
+    justify-content: center;
+}
+
+footer .credits span {
+    font: var(--contact-p);
+}
+
+@media screen and (max-width:800px) {
+    header {
+        background-color: #ffffff46;
+        width: 100vw;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .banner {
+        width: 100%;
+        height: 80vw;
+    }
+
+    .banner h1 {
+        font-size: 25pt;
+    }
+
+    .banner p {
+        inline-size: 90%;
+        margin-top: 1rem;
+    }
+
+    .icons {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .logo:hover+span {
+        top: 5%;
+        left: 20%;
+    }
+
+    .p-container {
+        width: 90vw;
+        height: 40vh;
+    }
+
+    .bgi-container {
+        width: 80%;
+        height: 50%;
+    }
+
+    .buttons {
+        width: 80%;
+    }
+
+    .buttons a {
+        font-size: 10pt;
+        text-align: center;
+    }
+
+    footer .footer-icons {
+        display: none;
+    }
+}

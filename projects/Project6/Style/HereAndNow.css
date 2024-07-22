@@ -1,0 +1,114 @@
+/* reset */
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+:root{
+    --cont-h1: normal normal normal 70pt Satisfy;
+    --cont-h2: normal normal normal 15pt Varela Round;
+    --cont-p: normal normal normal 10pt Varela Round;
+}
+
+body{
+    background: linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ------------------CONTAINER------------------- */
+.container{
+    width: 65vw;
+    text-align: center;
+    margin: auto;
+}
+
+.container h1{
+    font: var(--cont-h1);
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0px 0px 40px #00000087;
+}
+
+.container h2{
+    font: var(--cont-h2);
+    margin: 0.5rem;
+    color: #fff;
+}
+
+.container p {
+    font: var(--cont-p);
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+/* --------------FORM SECTION-------------------- */
+.form{
+    width: 90%;
+    display: flex;
+    align-items: flex-end;
+    margin: auto;
+}
+
+.input-box{
+    width: 100%;
+    align-items: center;
+    margin: 0 0 0 1rem;
+}
+
+.form label{
+    display: block;
+    text-align: start;
+    color: #fff;
+    font: var(--cont-p);
+}
+
+.form input{
+    width: 100%;
+    height: 2rem;
+    background-color: #f6f6f624;
+    border: 2px solid #fff;
+}
+.form input[type="button"]{
+    width: 40%;
+    background-color: #fff;
+}
+
+/* ---------------Media Queries / PHONES---------------- */
+@media screen and (max-width: 600px){
+    .container{
+        margin: 55vw auto;
+        width: 85vw;
+    }
+    .container h1{
+        font-size: 50pt;
+    }
+    .container h2{
+        margin: 2rem 0 1rem;
+    }
+    .form{
+        margin-top: 4rem;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .input-box{
+        margin: 0;
+    }
+    .form input{
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    .form input[type="button"]{
+        width: 100%;
+    }
+}
