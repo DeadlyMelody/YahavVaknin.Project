@@ -119,6 +119,7 @@ label {
 }
 
 .calc-game input[type="submit"]:hover {
+  color: #000;
   background-color: #f9fafb;
 }
 
